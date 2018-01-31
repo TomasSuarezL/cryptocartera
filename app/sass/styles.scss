@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,600|Open+Sans:300,400,700|Raleway:100,400|Roboto:300,400');
+@import 'theme';
+@import 'spinner';
+
+html, body {
+    margin: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.navbar{
+    margin:0;
+    padding: 8px;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: $primary-blue;
+    color: $primary-dark;
+    font-family: 'Open Sans';
+    font-weight: 300;
+    box-shadow: 0px 1px 6px black;
+    
+    h1{
+        margin: 0;
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+
+    span{
+        color:$primary-lightgreen;
+    }
+
+}
+
+.subheader {
+    display: flex;
+    flex-direction: row;
+    font: 600 22px 'Open Sans';
+    text-align: left;
+    color: $primary-blue;
+    background-color: $primary-dark;
+    background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+    margin: 0;
+    padding: 16px;
+    border-bottom: 1px solid;
+
+    p{
+        flex: 3;
+        margin: 0;
+    }
+
+    button{
+        width: 8rem;
+        border: none;
+        background-color: $primary-lightdark;
+        color: $primary-blue;
+        transition: background-color 0.3s ease-in-out;
+        cursor: pointer;
+        font: 400 14px 'Open Sans';
+
+        &.agregar{
+            margin-right: 16px;
+        }
+
+        &:nth-child(4){
+            border-left: 1px solid $primary-blue;
+            border-right: 1px solid $primary-blue;
+        }
+    
+        &:hover{
+            background-color: $primary-dark;
+        }
+    }
+}
+
+
+.cartera{
+    display: flex;
+    flex-direction: column;
+    font: 400 16px 'Open Sans';
+    padding: 16px;
+    color: $primary-blue; 
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        border: 2px solid $primary-green;
+        background-color: $primary-lightgreen;
+        margin: 4px;
+    }
+
+    &-row{
+        display: flex;
+        flex-direction: row;
+
+        div{
+            flex:1;
+            position: relative;
+            margin: 0;
+            padding: 16px;
+            text-align: center;
+
+            &.ticker{
+                font-weight: 600;
+                background-color: $primary-green;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 8px;
+
+                img{
+                    margin-right: 16px;
+                    margin-left: 8px;
+                }
+            }
+
+            .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: $primary-dark;
+                color: #fff;
+                text-align: center;
+                border-radius: 6px;
+                padding: 8px;
+                opacity: 0;
+                /* Position the tooltip */
+                position: absolute;
+                z-index: 1;
+                bottom: 100%;
+                left: 50%; 
+                margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+                transition: all 0.4s ease
+            }
+
+            &:hover .tooltiptext {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+
+.ui-dialog{
+    background-color: whitesmoke;
+    color: whitesmoke;
+    padding: 8px;
+    font: 300 16px 'Roboto';
+    
+    #dialog-form{
+        display: none;
+        height: auto;
+    }
+
+    .ui-dialog-titlebar{
+        background-color: $primary-blue;
+    }
+
+    .ui-dialog-titlebar-close{
+        text-indent: 0;
+        color: white;
+        background-color: transparent;
+        border: none;
+    }
+
+    form fieldset {
+        display: flex;
+        flex-direction: row;
+        border: none;
+        color: $primary-blue;
+
+        label {
+            margin-top: 16px;
+        }
+
+        input{
+            font: 400 16px 'Roboto';
+            width: 95%;
+            color: $primary-blue;
+            padding: 8px;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $primary-blue;
+        }
+    }
+
+    .ui-dialog-buttonpane button{
+        background-color: $primary-blue;
+        color: white;
+        border: none;
+        transition: background-color 0.4s ease;
+        padding: 8px;
+        font: 300 16px 'Roboto';
+
+        &:hover{
+            background-color: $primary-lightdark;
+        }
+    }
+}
+
+.ui-widget-overlay
+{
+  opacity: .50 !important; /* Make sure to change both of these, as IE only sees the second one */
+  filter: Alpha(Opacity=50) !important;
+
+  background-color: rgb(50, 50, 50) !important; /* This will make it darker */
+}
+

@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:300,400,600|Open+Sans:300,400,700|Raleway:100,400|Roboto:300,400");
+.spin-loader {
+  margin: 10rem auto;
+  border-radius: 80%;
+  display: block;
+  height: 50px;
+  width: 50px;
+  position: relative;
+  animation: spin 0.675s linear 0s infinite normal;
+  background: #348AA7; }
+  .spin-loader:before, .spin-loader:after {
+    content: "";
+    display: block;
+    position: absolute; }
+  .spin-loader:before {
+    border-radius: 0 90px 90px 0;
+    height: 50px;
+    width: 50%;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: #5DD39E;
+    background-image: linear-gradient(#348AA7, #5DD39E); }
+  .spin-loader:after {
+    border-radius: 80%;
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    background: white; }
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg); } }
+
+html, body {
+  margin: 0;
+  width: 100%;
+  background-color: white; }
+
+.navbar {
+  margin: 0;
+  padding: 8px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background-color: #348AA7;
+  color: #513B56;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  box-shadow: 0px 1px 6px black; }
+  .navbar h1 {
+    margin: 0;
+    font-size: 32px;
+    letter-spacing: 1px; }
+  .navbar span {
+    color: #D4EFB0; }
+
+.subheader {
+  display: flex;
+  flex-direction: row;
+  font: 600 22px 'Open Sans';
+  text-align: left;
+  color: #348AA7;
+  background-color: #513B56;
+  background-image: url("https://www.transparenttextures.com/patterns/black-linen.png");
+  margin: 0;
+  padding: 16px;
+  border-bottom: 1px solid; }
+  .subheader p {
+    flex: 3;
+    margin: 0; }
+  .subheader button {
+    width: 8rem;
+    border: none;
+    background-color: #525174;
+    color: #348AA7;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    font: 400 14px 'Open Sans'; }
+    .subheader button.agregar {
+      margin-right: 16px; }
+    .subheader button:nth-child(4) {
+      border-left: 1px solid #348AA7;
+      border-right: 1px solid #348AA7; }
+    .subheader button:hover {
+      background-color: #513B56; }
+
+.cartera {
+  display: flex;
+  flex-direction: column;
+  font: 400 16px 'Open Sans';
+  padding: 16px;
+  color: #348AA7; }
+  .cartera-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #5DD39E;
+    background-color: #D4EFB0;
+    margin: 4px; }
+  .cartera-row {
+    display: flex;
+    flex-direction: row; }
+    .cartera-row div {
+      flex: 1;
+      position: relative;
+      margin: 0;
+      padding: 16px;
+      text-align: center; }
+      .cartera-row div.ticker {
+        font-weight: 600;
+        background-color: #5DD39E;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 8px; }
+        .cartera-row div.ticker img {
+          margin-right: 16px;
+          margin-left: 8px; }
+      .cartera-row div .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #513B56;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 8px;
+        opacity: 0;
+        /* Position the tooltip */
+        position: absolute;
+        z-index: 1;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -60px;
+        /* Use half of the width (120/2 = 60), to center the tooltip */
+        transition: all 0.4s ease; }
+      .cartera-row div:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1; }
+
+.ui-dialog {
+  background-color: whitesmoke;
+  color: whitesmoke;
+  padding: 8px;
+  font: 300 16px 'Roboto'; }
+  .ui-dialog #dialog-form {
+    display: none;
+    height: auto; }
+  .ui-dialog .ui-dialog-titlebar {
+    background-color: #348AA7; }
+  .ui-dialog .ui-dialog-titlebar-close {
+    text-indent: 0;
+    color: white;
+    background-color: transparent;
+    border: none; }
+  .ui-dialog form fieldset {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    color: #348AA7; }
+    .ui-dialog form fieldset label {
+      margin-top: 16px; }
+    .ui-dialog form fieldset input {
+      font: 400 16px 'Roboto';
+      width: 95%;
+      color: #348AA7;
+      padding: 8px;
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #348AA7; }
+  .ui-dialog .ui-dialog-buttonpane button {
+    background-color: #348AA7;
+    color: white;
+    border: none;
+    transition: background-color 0.4s ease;
+    padding: 8px;
+    font: 300 16px 'Roboto'; }
+    .ui-dialog .ui-dialog-buttonpane button:hover {
+      background-color: #525174; }
+
+.ui-widget-overlay {
+  opacity: .50 !important;
+  /* Make sure to change both of these, as IE only sees the second one */
+  filter: Alpha(Opacity=50) !important;
+  background-color: #323232 !important;
+  /* This will make it darker */ }

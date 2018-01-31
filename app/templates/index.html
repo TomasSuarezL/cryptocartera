@@ -1,12 +1,53 @@
-<head>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="../static/styles.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="../static/libs/jquery-ui.structure.css" />
+    </head>
+    <body>
+        <div class="navbar">
+            <h1>Crypto<span>cartera</span></h1>
+        </div>
+        <div class="totales">
 
-</head>
-<body>
-    <div class="navbar">
-        <h1>HELLO WORLD Y LA RE PUTA MADRE</h1>
-    </div>
-    <p> Cartera </p>
-    <div class="cartera">
-        
-    </div>
-</body>
+        </div>
+        <div class="subheader"> 
+            <p>Cartera</p>
+            <button class="agregar">Agregar Crypto</button>
+            <button>Por Nombre</button>
+            <button>Por BTC</button>
+            <button>Por Cantidad</button> 
+        </div>
+        <div class="cartera">
+        </div>
+        <div class="spin-loader"></div>
+        <div id="dialog-form" title="Agregar Crypto">
+            <form action='/api/crypto' method="POST">
+                <fieldset>
+                <label for="ticker">Ticker</label>
+                <input type="text" name="ticker" id="ticker" value="">
+                <label for="cantidad">Cantidad</label>
+                <input type="number" name="cantidad" id="cantidad" value="">
+                <label for="precio">Precio $</label>
+                <input type="number" name="precio" id="precio" value="" >
+                <label for="precio_moneda">Precio Moneda</label>
+                <input type="number" name="precio_moneda" id="precio_moneda" value="" >
+                <label for="moneda">Moneda</label>
+                <input type="text" name="moneda" id="moneda" value="">
+                <label for="fecha">Fecha - dd/MM/YYYY hh:mm</label>
+                <input type="text" name="fecha" id="fecha" value="" >
+            
+                <!-- Allow form submission with keyboard without duplicating the dialog button -->
+                <input type="submit" tabindex="-1" style="position:absolute; top:-1000px">
+                </fieldset>
+            </form>
+        </div>
+        <script src="../static/libs/jquery-3.3.1.min.js"></script>
+        <script src="../static/libs/jquery-ui.min.js"></script>
+        <script src="../static/scripts/main.js"></script>
+    </body>
+</html>

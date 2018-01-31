@@ -8,4 +8,4 @@ Seguidor de cartera de cryptos y otros assets.
 ##### PostgreSQL
 - sudo apt-get install postgresql postgresql-contrib
 
-
+ICONS : [here](https://github.com/cjdowner/cryptocurrency-icons)
